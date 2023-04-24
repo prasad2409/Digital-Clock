@@ -1,32 +1,37 @@
-body{
+body {
     margin: 0;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    justify-content: center;
-    background: url("https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+    align-items: left;
+    height: 50vh;
+    justify-content: left;
     background-size: cover;
     overflow: hidden;
     background-attachment: fixed;
 }
-h2{
+
+h2 {
+    margin:25px 0 0 90px;
     text-transform: uppercase;
     letter-spacing: 4px;
-    font-size: 14px;
-    text-align: center;
-    color: black;
+    font-size: 20px;
+    text-align: left;
+    color: whitesmoke;
 }
-.clock{
+
+.clock {
     display: flex;
+    margin: 25px;
 }
-.clock div{
+
+.clock div {
     margin: 5px;
     position: relative;
 
 }
-.clock span{
+
+.clock span {
     width: 100px;
     height: 80px;
     background-color: slateblue;
@@ -36,21 +41,122 @@ h2{
     justify-content: center;
     align-items: center;
     font-size: 50px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 
-.clock .text{
+.clock .text {
+    
     height: 30px;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
     background: blue;
 }
-.clock #ampm{
+
+.clock #ampm {
     bottom: 0;
     position: absolute;
     width: 60px;
     height: 30px;
     font-size: 20px;
     background: yellowgreen;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'arial', sans-serif;
+
+}
+.clocksec{
+    margin-top: 30px;
+    animation: change 60s infinite ease-in-out;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .main{
+    width: 580px;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+section .main .searchBox{
+
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+
+}
+section .main .searchBox .query{
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    border-radius: 30px;
+    padding-left: 45px;
+    padding-right: 60px;
+}
+
+section .main .searchBox .icons{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    align-items: center;
+    pointer-events: none;
+}
+section .main .searchBox .icons img{
+    max-width: 100%;
+}
+
+.searchButton{
+    margin: 0 5px;
+    margin-top: 20px;
+    padding: 12px 20px;
+    color: #555;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    outline: none;
+}
+.searchButton:hover{
+    border: 1px solid #ccc;
+}
+
+@keyframes change{
+    0%{
+        background-image: url(img7.jpg);
+    }
+    20%{
+        background-image: url(img8.jpg);
+    }
+    40%{
+        background-image: url(img3.jpg);
+    }
+    60%{
+        background-image: url(img4.jpg);
+    }
+    80%{
+        background-image: url(img5.jpg);
+    }
+    100%{
+        background-image: url(img6.jpg);
+    }
+    
 }
